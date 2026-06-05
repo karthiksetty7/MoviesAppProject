@@ -20,7 +20,7 @@ const apiStatusConstants = {
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([])
   const [originalMovies, setOriginalMovies] = useState([])
-  const [topRatedMovies, setTopRatedMovies] = useState([])
+  const [topRatedMovies, setTopRatedMovies] = useState([]) // Keeps tracking data for the middle section
 
   const [trendingStatus, setTrendingStatus] = useState(
     apiStatusConstants.initial,
@@ -116,6 +116,7 @@ const Home = () => {
     }
   }
 
+  // FIXED: Changed fetch endpoint target to popularMoviesApi
   const getTopRatedMovies = async () => {
     setTopRatedStatus(apiStatusConstants.inProgress)
     const options = {
@@ -126,8 +127,8 @@ const Home = () => {
     }
 
     try {
-      // Fixed: Swapped to endpoints.topRatedMoviesApi endpoint path
-      const response = await fetch(endpoints.topRatedMoviesApi, options)
+      // Points directly to the popular movies endpoint now
+      const response = await fetch(endpoints.popularMoviesApi, options)
       if (response.ok) {
         const data = await response.json()
         const updatedData = data.results.map(eachMovie => ({
