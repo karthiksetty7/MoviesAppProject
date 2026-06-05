@@ -8,6 +8,11 @@ import './index.css'
 const Account = () => {
   const navigate = useNavigate()
 
+  const username = localStorage.getItem('username') || ''
+  const password = localStorage.getItem('password') || ''
+
+  const maskedPassword = '*'.repeat(password.length)
+
   const onClickLogout = () => {
     Cookies.remove('jwt_token')
     navigate('/login', {replace: true})
@@ -20,27 +25,34 @@ const Account = () => {
       <div className="account-responsive-body">
         <div className="account-card-content">
           <h1 className="account-main-heading">Account</h1>
+
           <hr className="account-card-divider" />
 
           <div className="account-info-row-section">
             <p className="account-row-label">Member ship</p>
+
             <div className="account-row-details-block">
-              <p className="account-user-email">rahul@gmail.com</p>
+              <p className="account-user-email">{username}</p>
+
               <p className="account-user-password">
                 Password :{' '}
-                <span className="password-masked-stars">************</span>
+                <span className="password-masked-stars">{maskedPassword}</span>
               </p>
             </div>
           </div>
+
           <hr className="account-card-divider" />
 
           <div className="account-info-row-section">
             <p className="account-row-label">Plan details</p>
+
             <div className="account-plan-details-inline">
               <p className="account-plan-premium-text">Premium</p>
+
               <span className="account-plan-ultra-hd-badge">Ultra HD</span>
             </div>
           </div>
+
           <hr className="account-card-divider" />
 
           <div className="account-logout-action-container">
@@ -64,6 +76,7 @@ const Account = () => {
           >
             <FaGoogle />
           </button>
+
           <button
             type="button"
             className="footer-social-icon-btn"
@@ -71,6 +84,7 @@ const Account = () => {
           >
             <FaTwitter />
           </button>
+
           <button
             type="button"
             className="footer-social-icon-btn"
@@ -78,6 +92,7 @@ const Account = () => {
           >
             <FaInstagram />
           </button>
+
           <button
             type="button"
             className="footer-social-icon-btn"
@@ -86,6 +101,7 @@ const Account = () => {
             <FaYoutube />
           </button>
         </div>
+
         <p className="account-footer-contact-text">Contact Us</p>
       </footer>
     </div>
