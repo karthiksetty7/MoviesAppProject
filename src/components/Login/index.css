@@ -1,0 +1,216 @@
+/* Write your code here */
+.login-route-container {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('https://res.cloudinary.com/dlvle38po/image/upload/v1780653501/8ccaf66f19edc15e3aa6b6a1301fd6667bf2509e_eqgbkc.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-overlay {
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 456px;
+
+  background: rgba(12, 11, 16, 0.9);
+
+  border-radius: 8px;
+
+  padding: 48px;
+}
+
+.login-logo {
+  width: 180px;
+  margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-heading {
+  margin: 0;
+  margin-bottom: 32px;
+
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 24px;
+}
+
+.input-label {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+
+  margin-bottom: 8px;
+}
+
+.input-field {
+  height: 48px;
+  width: 100%;
+
+  background: #333333;
+
+  border: none;
+  outline: none;
+
+  border-radius: 4px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.input-field::placeholder {
+  color: #94a3b8;
+}
+
+/* --- Added rules for Password Visibility Feature --- */
+.password-field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input {
+  padding-right: 48px; /* Added right padding to prevent text overlapping the button */
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+  color: #ffffff;
+}
+/* -------------------------------------------------- */
+
+.login-button {
+  width: 100%;
+  height: 40px;
+
+  background: #e50914;
+
+  border: none;
+  border-radius: 4px;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  margin-top: 8px;
+}
+
+.login-button:hover {
+  opacity: 0.95;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 12px;
+
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+  .login-form-container {
+    max-width: 420px;
+    padding: 40px;
+  }
+
+  .login-logo {
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 576px) {
+  .login-route-container {
+    background-image: none;
+    background-color: #131313;
+  }
+
+  .login-overlay {
+    background: #131313;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 48px;
+  }
+
+  .login-form-container {
+    background: transparent;
+
+    padding: 0;
+
+    max-width: 100%;
+  }
+
+  .login-logo {
+    width: 100px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login-heading {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .input-field {
+    height: 44px;
+  }
+
+  .login-button {
+    margin-top: 16px;
+  }
+}

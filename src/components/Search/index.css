@@ -1,0 +1,149 @@
+.search-container {
+  min-height: 100vh;
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-content {
+  flex-grow: 1;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-movies-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Pagination Rules Layout */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.pagination-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-btn:disabled {
+  color: #64748b;
+  border-color: #64748b;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.page-number-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.no-results-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.no-results-image {
+  width: 320px;
+  max-width: 100%;
+  margin-bottom: 24px;
+}
+
+.no-results-text {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  min-height: 50vh;
+}
+
+@media screen and (max-width: 992px) {
+  .search-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .search-movies-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-content {
+    padding-top: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .search-movies-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .no-results-image {
+    width: 250px;
+  }
+
+  .no-results-text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .search-content {
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 32px;
+  }
+
+  .search-movies-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .no-results-image {
+    width: 200px;
+  }
+
+  .no-results-text {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,126 @@
+.popular-container {
+  min-height: 100vh;
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-content {
+  flex-grow: 1;
+  padding-top: 32px;
+  padding-bottom: 48px;
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popular-movies-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Pagination Control Elements Layout Alignment */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.pagination-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pagination-btn:disabled {
+  color: #64748b;
+  border-color: #64748b;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.page-number-text {
+  color: #ffffff;
+  font-family: 'HK Grotesk', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Media Breakpoints for Tablet & Mobile Layout Adaptations */
+@media screen and (max-width: 992px) {
+  .popular-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .popular-movies-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popular-content {
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .popular-movies-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .popular-content {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .popular-movies-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .pagination-container {
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .pagination-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .page-number-text {
+    font-size: 14px;
+  }
+}

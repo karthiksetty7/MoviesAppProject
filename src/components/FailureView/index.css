@@ -1,0 +1,108 @@
+.failure-view-container {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 24px;
+}
+
+.failure-image {
+  width: 260px;
+  max-width: 100%;
+
+  margin-bottom: 24px;
+}
+
+.failure-heading {
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.failure-description {
+  color: #94a3b8;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  max-width: 500px;
+
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.try-again-button {
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  background: #ffffff;
+
+  color: #171f46;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  height: 40px;
+
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .failure-image {
+    width: 220px;
+  }
+
+  .failure-heading {
+    font-size: 20px;
+  }
+
+  .failure-description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .failure-view-container {
+    min-height: 50vh;
+
+    padding: 16px;
+  }
+
+  .failure-image {
+    width: 180px;
+
+    margin-bottom: 20px;
+  }
+
+  .failure-heading {
+    font-size: 18px;
+  }
+
+  .failure-description {
+    font-size: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .try-again-button {
+    height: 36px;
+    font-size: 12px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}

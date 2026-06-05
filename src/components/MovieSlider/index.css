@@ -1,0 +1,96 @@
+.movie-slider-container {
+  width: 100%;
+  position: relative;
+}
+
+.slider-item {
+  padding: 0 8px;
+  outline: none;
+}
+
+.slick-slider {
+  width: 100%;
+}
+
+.slick-list {
+  margin: 0 -8px;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide > div {
+  display: flex;
+  width: 100%;
+}
+
+/* Fix arrows overflow by positioning them neatly within content boundaries */
+.slick-prev,
+.slick-next {
+  width: 32px;
+  height: 32px;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+  color: #ffffff;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1;
+}
+
+.slick-prev {
+  left: -32px;
+}
+
+.slick-next {
+  right: -32px;
+}
+
+@media screen and (max-width: 768px) {
+  .slider-item {
+    padding: 0 6px;
+  }
+
+  .slick-list {
+    margin: 0 -6px;
+  }
+
+  .slick-prev {
+    left: -20px;
+  }
+
+  .slick-next {
+    right: -20px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 24px;
+  }
+}
+
+/* Clean up swiping layouts on tiny viewports */
+@media screen and (max-width: 576px) {
+  .slider-item {
+    padding: 0 4px;
+  }
+
+  .slick-list {
+    margin: 0 -4px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+}
